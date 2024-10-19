@@ -73,7 +73,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__ . '/auth.php';
 
 
-
+// se crea una ruta para redireccionar a la pagina de twitter
 Route::get('/auth/redirect', [AuthController::class, 'redirect'])->name('auth.redirect');
-
+// se crea una ruta para llamar a la api de twitter y validar credenciales
 Route::get('/auth/callback', [AuthController::class, 'callback'])->name('auth.callback');
